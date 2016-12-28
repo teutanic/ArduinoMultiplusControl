@@ -1,0 +1,581 @@
+﻿Version     0.0
+Platform    uLCD-32PTU-L
+PlatRes     240x320
+Depends
+end
+Options
+    Genie
+    Speed                        200000
+    Checksum                     No
+    ResponseSize                 2
+    Multidrop                    No
+    Destination                  1
+    MainForm                     2
+    SndBuf                       0
+    ButtonDisable                No
+    SignedDigits                 No
+end
+Form
+    Name                         Form0
+    Alias                        Form0
+    Bgtype                       Color
+    Color                        BLACK
+    Image                        (None)
+    Source.Height                0
+    Source.Left                  0
+    Source.Top                   0
+    Source.Width                 0
+    OnActivate                   'Report Message'
+    OnCreate                     ''
+    OnRepeat                     ''
+    OnTouchMoving                ''
+    OnTouchPressed               ''
+    OnTouchReleased              ''
+end
+Gradient
+    Name                         Gradient0
+    Alias                        Gradient0
+    ColorWidth                   1
+    Direction                    UpDown
+    EndColor                     0x000095
+    Height                       240
+    Left                         20
+    StartColor                   0x042028
+    SwapColors                   No
+    Top                          0
+    Width                        300
+end
+LedDigits
+    Name                         Leddigits0
+    Alias                        Leddigits0
+    Color                        0x9A0000
+    Decimals                     1
+    Digits                       3
+    Height                       65
+    LeadingZero                  Yes
+    Left                         36
+    OutlineColor                 BLACK
+    Palette.High                 0xEDC785
+    Palette.Low                  0x005100
+    Top                          84
+    Width                        151
+    OnChanged                    ''
+    OnTouchMoving                ''
+    OnTouchPressed               ''
+    OnTouchReleased              ''
+end
+Strings
+    Name                         Strings0
+    Alias                        Strings0
+    Alignment                    Left
+    BGcolor                      0x2B178A
+    Height                       18
+    FGcolor                      WHITE
+    Font.Bold                    No
+    Font.CharSet                 ANSI
+    Font.Italic                  No
+    Font.Name                    '4D Font3 (8x12)'
+    Font.Opaque                  Yes
+    Font.Size                    12
+    Font.Strikethrough           No
+    Font.Underline               No
+    Left                         20
+    Strings                      ''
+    StringsStyle                 Message
+    Top                          222
+    Width                        296
+    OnChanged                    ''
+end
+StaticText
+    Name                         Statictext0
+    Alias                        Statictext0
+    AutoSize                     Yes
+    Caption                      'Active Current Limit'
+    Color                        BLACK
+    Font.Color                   0x7873FF
+    Font.Effects                 []
+    Font.Name                    Tahoma
+    Font.Size                    9
+    Font.Style                   []
+    Height                       14
+    Left                         56
+    Top                          60
+    Transparent                  Yes
+    Width                        108
+    WordWrap                     Yes
+end
+StaticText
+    Name                         Statictext1
+    Alias                        Statictext1
+    AutoSize                     Yes
+    Caption                      Inverter
+    Color                        BLACK
+    Font.Color                   0xA18BFB
+    Font.Effects                 []
+    Font.Name                    Tahoma
+    Font.Size                    9
+    Font.Style                   []
+    Height                       14
+    Left                         208
+    Top                          100
+    Transparent                  Yes
+    Width                        44
+    WordWrap                     Yes
+end
+StaticText
+    Name                         Statictext2
+    Alias                        Statictext2
+    AutoSize                     Yes
+    Caption                      Charger
+    Color                        BLACK
+    Font.Color                   0xA18BFB
+    Font.Effects                 []
+    Font.Name                    Tahoma
+    Font.Size                    9
+    Font.Style                   []
+    Height                       19
+    Left                         208
+    Top                          140
+    Transparent                  Yes
+    Width                        42
+    WordWrap                     Yes
+end
+GSlider
+    Name                         Slider0
+    Alias                        Slider0
+    Bevel.BorderColor            clBtnFace
+    Bevel.BorderWidth            0
+    Bevel.InnerColor             BLACK
+    Bevel.InnerHighlight         clBtnHighlight
+    Bevel.InnerOutline           None
+    Bevel.InnerShadow            clBtnShadow
+    Bevel.InnerSpace             1
+    Bevel.InnerStyle             Lowered
+    Bevel.Innerwidth             2
+    Bevel.OuterColor             clBtnFace
+    Bevel.OuterHighlight         clBtnHighlight
+    Bevel.OuterOutline           Outer
+    Bevel.OuterShadow            clBtnShadow
+    Bevel.OuterSpace             0
+    Bevel.OuterStyle             Raised
+    Bevel.Outerwidth             1
+    Bevel.Visible                Yes
+    BorderColor                  clBtnFace
+    BorderWidth                  1
+    Color                        BLACK
+    Height                       36
+    Left                         20
+    Maxvalue                     282
+    Minvalue                     1
+    Orientation                  Horizontal
+    Palette.High                 0xFFAE00
+    Palette.Low                  0x761F25
+    Spacing                      1
+    SolidFill                    Yes
+    TickWidth                    1
+    Top                          12
+    Width                        299
+    OnChanged                    'Report Message'
+    OnChanging                   Leddigits0Set
+end
+Led
+    Name                         Led0
+    Alias                        Led0
+    Active                       Yes
+    Caption                      ''
+    Color                        BLACK
+    Font.Color                   clWhite
+    Font.Effects                 []
+    Font.Name                    Arial
+    Font.Size                    8
+    Font.Style                   []
+    Glyphs                       (None)
+    Height                       20
+    Layout                       Left
+    LedType                      Rounded
+    Left                         220
+    Palette.High                 clRed
+    Palette.Low                  LIME
+    Spacing                      5
+    Top                          120
+    Width                        20
+    OnChanged                    ''
+end
+Led
+    Name                         Led1
+    Alias                        Led1
+    Active                       Yes
+    Caption                      ''
+    Color                        BLACK
+    Font.Color                   clWhite
+    Font.Effects                 []
+    Font.Name                    Arial
+    Font.Size                    8
+    Font.Style                   []
+    Glyphs                       (None)
+    Height                       20
+    Layout                       Left
+    LedType                      Rounded
+    Left                         220
+    Palette.High                 clRed
+    Palette.Low                  LIME
+    Spacing                      5
+    Top                          156
+    Width                        20
+    OnChanged                    ''
+end
+Led
+    Name                         Led2
+    Alias                        Led2
+    Active                       Yes
+    Caption                      ''
+    Color                        BLACK
+    Font.Color                   clWhite
+    Font.Effects                 []
+    Font.Name                    Arial
+    Font.Size                    8
+    Font.Style                   []
+    Glyphs                       (None)
+    Height                       20
+    Layout                       Left
+    LedType                      Rounded
+    Left                         220
+    Palette.High                 clRed
+    Palette.Low                  LIME
+    Spacing                      5
+    Top                          192
+    Width                        20
+    OnChanged                    ''
+end
+StaticText
+    Name                         Statictext3
+    Alias                        Statictext3
+    AutoSize                     Yes
+    Caption                      'AC IN'
+    Color                        BLACK
+    Font.Color                   0xA18BFB
+    Font.Effects                 []
+    Font.Name                    Tahoma
+    Font.Size                    9
+    Font.Style                   []
+    Height                       14
+    Left                         212
+    Top                          176
+    Transparent                  Yes
+    Width                        31
+    WordWrap                     Yes
+end
+4Dbutton
+    Name                         4Dbutton2
+    Alias                        4Dbutton2
+    Height                       32
+    Left                         35
+    Matrix                       -1
+    Momentary                    Yes
+    Size                         32x32
+    Style                        Blue
+    Top                          164
+    Type                         Button02
+    Width                        32
+    OnChanged                    'Report Message'
+end
+StaticText
+    Name                         Statictext4
+    Alias                        Statictext4
+    AutoSize                     Yes
+    Caption                      0
+    Color                        BLACK
+    Font.Color                   0xA18BFB
+    Font.Effects                 []
+    Font.Name                    Tahoma
+    Font.Size                    9
+    Font.Style                   []
+    Height                       14
+    Left                         48
+    Top                          200
+    Transparent                  Yes
+    Width                        15
+    WordWrap                     Yes
+end
+4Dbutton
+    Name                         4Dbutton3
+    Alias                        4Dbutton3
+    Height                       32
+    Left                         75
+    Matrix                       -1
+    Momentary                    Yes
+    Size                         32x32
+    Style                        Blue
+    Top                          164
+    Type                         Button02
+    Width                        32
+    OnChanged                    'Report Message'
+end
+StaticText
+    Name                         Statictext5
+    Alias                        Statictext5
+    AutoSize                     Yes
+    Caption                      10
+    Color                        BLACK
+    Font.Color                   0xA18BFB
+    Font.Effects                 []
+    Font.Name                    Tahoma
+    Font.Size                    9
+    Font.Style                   []
+    Height                       14
+    Left                         83
+    Top                          200
+    Transparent                  Yes
+    Width                        14
+    WordWrap                     Yes
+end
+4Dbutton
+    Name                         4Dbutton4
+    Alias                        4Dbutton4
+    Height                       32
+    Left                         115
+    Matrix                       -1
+    Momentary                    Yes
+    Size                         32x32
+    Style                        Blue
+    Top                          163
+    Type                         Button02
+    Width                        32
+    OnChanged                    'Report Message'
+end
+StaticText
+    Name                         Statictext6
+    Alias                        Statictext6
+    AutoSize                     Yes
+    Caption                      15
+    Color                        BLACK
+    Font.Color                   0xA18BFB
+    Font.Effects                 []
+    Font.Name                    Tahoma
+    Font.Size                    9
+    Font.Style                   []
+    Height                       14
+    Left                         125
+    Top                          199
+    Transparent                  Yes
+    Width                        14
+    WordWrap                     Yes
+end
+4Dbutton
+    Name                         4Dbutton5
+    Alias                        4Dbutton5
+    Height                       32
+    Left                         155
+    Matrix                       -1
+    Momentary                    Yes
+    Size                         32x32
+    Style                        Blue
+    Top                          164
+    Type                         Button02
+    Width                        32
+    OnChanged                    'Report Message'
+end
+StaticText
+    Name                         Statictext7
+    Alias                        Statictext7
+    AutoSize                     Yes
+    Caption                      28
+    Color                        BLACK
+    Font.Color                   0xA18BFB
+    Font.Effects                 []
+    Font.Name                    Tahoma
+    Font.Size                    9
+    Font.Style                   []
+    Height                       14
+    Left                         162
+    Top                          200
+    Transparent                  Yes
+    Width                        14
+    WordWrap                     Yes
+end
+4Dbutton
+    Name                         4Dbutton6
+    Alias                        4Dbutton6
+    Height                       32
+    Left                         216
+    Matrix                       -1
+    Momentary                    Yes
+    Size                         32x32
+    Style                        Red
+    Top                          64
+    Type                         Button01
+    Width                        32
+    OnChanged                    'Report Message'
+end
+StaticText
+    Name                         Statictext8
+    Alias                        Statictext8
+    AutoSize                     Yes
+    Caption                      'Set Limit'
+    Color                        BLACK
+    Font.Color                   0xA18BFB
+    Font.Effects                 []
+    Font.Name                    Tahoma
+    Font.Size                    9
+    Font.Style                   []
+    Height                       28
+    Left                         260
+    Top                          72
+    Transparent                  Yes
+    Width                        53
+    WordWrap                     Yes
+end
+4Dbutton
+    Name                         4Dbutton0
+    Alias                        4Dbutton0
+    Height                       32
+    Left                         272
+    Matrix                       -1
+    Momentary                    No
+    Size                         32x32
+    Style                        Blue
+    Top                          116
+    Type                         Button01
+    Width                        32
+    OnChanged                    'Report Message'
+end
+4Dbutton
+    Name                         4Dbutton1
+    Alias                        4Dbutton1
+    Height                       32
+    Left                         272
+    Matrix                       -1
+    Momentary                    No
+    Size                         32x32
+    Style                        Yellow
+    Top                          164
+    Type                         Button01
+    Width                        32
+    OnChanged                    'Report Message'
+end
+Form
+    Name                         Form1
+    Alias                        Form1
+    Bgtype                       Color
+    Color                        BLACK
+    Image                        (None)
+    Source.Height                0
+    Source.Left                  0
+    Source.Top                   0
+    Source.Width                 0
+    OnActivate                   ''
+    OnCreate                     ''
+    OnRepeat                     ''
+    OnTouchMoving                ''
+    OnTouchPressed               ''
+    OnTouchReleased              ''
+end
+UserButton
+    Name                         Userbutton0
+    Alias                        Userbutton0
+    Height                       238
+    Images                       ''
+    Left                         0
+    Matrix                       -1
+    Momentary                    Yes
+    Stretch                      No
+    Top                          2
+    Width                        319
+    OnChanged                    Form2Activate
+end
+Form
+    Name                         Form2
+    Alias                        Form2
+    Bgtype                       Color
+    Color                        BLACK
+    Image                        (None)
+    Source.Height                0
+    Source.Left                  0
+    Source.Top                   0
+    Source.Width                 0
+    OnActivate                   'Report Message'
+    OnCreate                     ''
+    OnRepeat                     ''
+    OnTouchMoving                ''
+    OnTouchPressed               ''
+    OnTouchReleased              ''
+end
+Gradient
+    Name                         Gradient9
+    Alias                        Gradient9
+    ColorWidth                   1
+    Direction                    UpDown
+    EndColor                     0x000095
+    Height                       240
+    Left                         0
+    StartColor                   0x042028
+    SwapColors                   No
+    Top                          0
+    Width                        320
+end
+Image
+    Name                         Image0
+    Alias                        Image0
+    Height                       150
+    Image                        teutanic_flag.jpg
+    Left                         16
+    Source.Height                159
+    Source.Left                  0
+    Source.Top                   0
+    Source.Width                 318
+    Top                          12
+    Width                        284
+    OnTouchMoving                ''
+    OnTouchPressed               ''
+    OnTouchReleased              ''
+end
+StaticText
+    Name                         Statictext9
+    Alias                        Statictext9
+    AutoSize                     Yes
+    Caption                      'TEUTANIC MULTI CONTROL'
+    Color                        0x2C4E76
+    Font.Color                   0x0669FA
+    Font.Effects                 []
+    Font.Name                    Tahoma
+    Font.Size                    12
+    Font.Style                   []
+    Height                       19
+    Left                         108
+    Top                          220
+    Transparent                  Yes
+    Width                        208
+    WordWrap                     Yes
+end
+StaticText
+    Name                         Statictext11
+    Alias                        Statictext11
+    AutoSize                     Yes
+    Caption                      'V 1.1'
+    Color                        BLACK
+    Font.Color                   0x4D71FF
+    Font.Effects                 []
+    Font.Name                    Tahoma
+    Font.Size                    9
+    Font.Style                   []
+    Height                       14
+    Left                         20
+    Top                          224
+    Transparent                  Yes
+    Width                        30
+    WordWrap                     Yes
+end
+4Dbutton
+    Name                         4Dbutton7
+    Alias                        4Dbutton7
+    Height                       50
+    Left                         144
+    Matrix                       -1
+    Momentary                    No
+    Size                         48x48
+    Style                        Red
+    Top                          168
+    Type                         Slider01
+    Width                        50
+    OnChanged                    Form0Activate
+end
